@@ -1,6 +1,6 @@
-# 🚀 Advanced Endpoint Protection Lab: Malware & Zero-Trust Defense
+﻿# 🛡️ Advanced Endpoint Protection Lab: Malware & Zero-Trust Defense
 
-## 🛡️ Project Focus
+## 🎯 Project Focus
 This documentation covers the second phase of my SOC engineering progression. While the prior lab focused on initial SIEM architecture, this project is dedicated to **Advanced Endpoint Defense**. I engineered a custom telemetry pipeline designed specifically to catch high-severity threats that evade standard Windows Defender and Microsoft audit logging.
 
 **Core Achievements:**
@@ -8,7 +8,7 @@ This documentation covers the second phase of my SOC engineering progression. Wh
 - Designed logic to catch **Level 12 UAC Bypasses** (`FodHelper.exe`).
 - Implemented **Autonomous SOAR Capabilities** using custom API-driven firewalls.
 
-## ⚙️ Technical Architecture (New Environment)
+## 🏗️ Technical Architecture (New Environment)
 - **Host System**: Windows 10 Pro (Monitored Endpoint)
 - **Advanced Telemetry**: Microsoft Sysmon (Custom XML Rule Implementation)
 - **SIEM Manager**: Wazuh Server on Ubuntu
@@ -28,7 +28,7 @@ Dropping a malicious binary into a system folder is a classic persistence techni
 - **Rule Trigger:** 92213
 - **Proof:** ![Malware Detection](assets/images/malware_file_drop.png)
 
-## 🛡️ Autonomous Defense Validation
+## ⚡ Autonomous Defense Validation
 The final milestone was proving the system could react faster than a human. Using Wazuh's `execd` process and a custom JSON-driven script mapping, the SIEM automatically executed a `netsh` firewall command to permanently block the attacker origin IP.
 - **Proof:** ![Active Response Fired](assets/images/active_response_triggered.png)
 
